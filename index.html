@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>蓝鹰特训</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/adddata.js"></script>
+    <script src="js/tool.js"></script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- 添加滚动到某个位置时才启动动画-->
+    <script src="js/wow.min.js"></script>
+    <link href="css/animate.css" rel='stylesheet' type='text/css' />
+    <!--时间轴-->
+    <link href="css/timestyle.css" rel='stylesheet' type='text/css' />
+    <script>
+        new WOW().init();
+    </script>
+
+</head>
+<body id="body" onload="UrlAnalytical();">
+<div class="header">
+    <div class="content">
+        <img class="logo fl" src="icon/loog.png"/>
+        <!--导航栏-->
+        <nav id="mainav" class="fl_right fl tc">
+            <ul class="clear">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li ><a class="drop" href="#">训练基地</a>
+                    <ul>
+                        <li><a href="#ty=jd&name=qz" onclick="AddImg('qz');">泉州</a></li>
+                        <li><a href="#ty=jd&name=xm" onclick="AddImg('xm');">厦门</a></li>
+                        <li><a href="#ty=jd&name=fz" onclick="AddImg('fz');">福州</a></li>
+                    </ul>
+                </li>
+                <li><a class="drop" href="#">拓展项目</a>
+                    <ul>
+                        <li><a href="#ty=xm&name=cd" onclick="Addxlxm('cd');">场地项目</a></li>
+                        <li><a href="#ty=xm&name=yw" onclick="Addxlxm('yw');">野外项目</a></li>
+                        <li><a href="#ty=xm&name=sn" onclick="Addxlxm('sn');">室内项目</a></li>
+
+                        <!--二级菜单-->
+                        <!--<li><a class="drop" href="#">Level 2 + Drop</a>
+                            <ul>
+                                <li><a href="#">Level 3</a></li>
+                                <li><a href="#">Level 3</a></li>
+                            </ul>
+                        </li>-->
+                    </ul>
+                </li>
+                <li><a href="#ty=hdlc" onclick="addTimeLine();">活动流程</a></li>
+                <li><a  href="#ty=jsy" onclick="Addjsy('jsy');">卷  首  语</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div style="height: 60px;"></div>
+<div id="content" class="content">
+    <div id="sy" style="display:none; ">
+    <div class="title">
+        <h1>厦门特瑞硕企业管理咨询有限公司</h1>
+        <h2>We  are  one  team！</h2>
+        <h2>Blue <img style="width: 100px;height: 100px;" src="icon/logo.png"/>  Eagle</h2>
+    </div>
+
+    <div id="video" style="position: fixed; left: 10px; bottom:30px; z-index: 100;"><div id="a1"></div></div>
+
+    <script type="text/javascript" src="video/js/ckplayer.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        var flashvars={
+            f:'video/1_0.mp4',
+            c:0,
+            b:1
+        };
+//        var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always'};
+//        CKobject.embedSWF('ckplayer/ckplayer.swf','a1','ckplayer_a1','600','400',flashvars,params);
+        /*
+         CKobject.embedSWF(播放器路径,容器id,播放器id/name,播放器宽,播放器高,flashvars的值,其它定义也可省略);
+         下面三行是调用html5播放器用到的
+         */
+        var video=['video/1_0.mp4'];
+        var support=['iPad','iPhone','ios','android+false','msie10+false','webKit'];
+        CKobject.embedHTML5('video','ckplayer_a1',300,200,video,flashvars,support);
+    </script>
+        <video autoplay="true"></video>
+    </div>
+</div>
+<div style="width: 100%;height: 50px;" class="fl"></div>
+<div class="tc" style="position: fixed;bottom:0px;width: 100%">
+    <div class=' pd5 centercontent1190' style="width: 100%;">
+        版权所有@蓝鹰特训
+    </div>
+</div>
+<!--图片展-->
+<script src="js/jquery.chocolat.js"></script>
+<link rel="stylesheet" href="css/chocolat.css" type="text/css"/>
+<!-- Javascript calls -->
+<script type="text/javascript" charset="utf-8">
+    $(function() {
+        $('.img').Chocolat({overlayColor:'#000',leftImg:'img/leftw.gif',rightImg:'img/rightw.gif',closeImg:'img/closew.gif'});
+    });
+
+    function AddImgPlay(){
+        $('.img').Chocolat({overlayColor:'#000',leftImg:'img/leftw.gif',rightImg:'img/rightw.gif',closeImg:'img/closew.gif'});
+    }
+</script>
+<!--在线客服-->
+
+<link href="kf/css/zzsc.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="kf/js/zzsc.js"></script>
+
+<div class="main-im">
+    <div id="open_im" class="open-im">&nbsp;</div>
+    <div class="im_main" id="im_main">
+        <div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=623126624&site=qq&menu=yes" class="im-qq qq-a" title="在线QQ客服"  target="_blank">
+            <div class="qq-container"></div>
+            <div class="qq-hover-c"><img class="img-qq" src="kf/images/qq.png"></div>
+            <span> QQ在线咨询</span> </a>
+        <div class="im-tel">
+            <div>咨询热线</div>
+            <div class="tel-num">13030998135</div>
+            <div>咨询热线</div>
+            <div class="tel-num">13030998135</div>
+        </div>
+        <div class="im-footer" style="position:relative">
+            <div class="weixing-container">
+                <div class="weixing-show">
+                    <div class="weixing-txt" style="color: #333333;">微信扫一扫<br>关注蓝鹰拓展</div>
+                    <img class="weixing-ma" src="kf/images/weixing-ma.jpg">
+                    <div class="weixing-sanjiao"></div>
+                    <div class="weixing-sanjiao-big"></div>
+                </div>
+            </div>
+            <div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>
+            <div style="clear:both"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
