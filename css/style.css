@@ -1,0 +1,237 @@
+@charset "utf-8";
+@import url("fontawesome-4.3.0.min.css");
+/* CSS Document */
+body{
+    background-attachment:fixed;
+    background-color: #645862;
+    background-image:  url("../icon/bg2.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    cursor: default;
+    /*text-align: center;*/
+    width: 100%;
+    height: 100%;
+    padding:0;
+    margin: 0;
+    float: left;
+}
+.header
+{
+    position: fixed;
+    text-align: center;
+   /* background: #212A3F;*/
+    background-image: url("../icon/line.png");
+    height: 60px;
+    width: 100%;
+    z-index:9999;
+
+}
+.content{
+    margin:0 auto;
+    width: 1200px;
+}
+.logo{
+    width: 250px;
+    height: 75px;
+    margin-top: 5px;
+}
+.fl{
+    float: left;
+}
+.tc{
+    text-align: center;
+}
+/*首页标题*/
+.title{
+    text-align: center;
+}
+.title h1
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+    color: #4433dd;
+    text-transform: uppercase;
+}
+.title h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 52px;
+    color: #4433dd;
+    text-transform: uppercase;
+}
+.centercontent1190{
+    background-color: rgba(112, 112, 112, 0.4);
+    width: 1190px;
+    margin: 0 auto;
+}
+.pd5{
+    padding:5px
+}
+.mg5{
+    margin:5PX;
+}
+.wh400x400{
+    width:287PX;
+    height:287PX;
+}
+/*导航栏*/
+/* Transition Fade
+--------------------------------------------------------------------------------------------------------------- */
+.faico a, #mainav *, #backtotop{transition:all .3s ease-in-out;}
+/* Navigation
+--------------------------------------------------------------------------------------------------------------- */
+nav ul, nav ol{margin:0; padding:0; list-style:none;}
+
+#mainav, #breadcrumb, .sidebar nav{line-height:normal;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+/* Top Navigation */
+#mainav{margin-left: 30px;}
+#mainav ul{text-transform:uppercase;}
+#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
+#mainav ul ul ul{left:180px; top:0;}
+#mainav li{display:inline-block; position:relative; margin:0 20px 0 0; padding:0;}
+#mainav li:last-child{margin-right:0;}
+#mainav li li{width:100%; margin:0;}
+#mainav li a{display:block; padding:20px 0;text-decoration:none;}
+#mainav li li a{border:solid; border-width:0 0 1px 0;}
+#mainav .drop{padding-left:15px;}
+#mainav li li a, #mainav li li .drop{display:block; margin:0; padding:10px 15px;}
+#mainav .drop::after, #mainav li li .drop::after{content:"\f0d7";}
+#mainav .drop::after{top:25px; left:5px;}
+#mainav li li .drop::after{top:15px; left:5px;}
+#mainav ul ul{visibility:hidden; opacity:0;}
+#mainav ul li:hover > ul{visibility:visible; opacity:1;}
+#mainav form{display:none; margin:0; padding:0;}
+#mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
+#mainav form select{width:100%; padding:5px; border:1px solid;}
+#mainav form select option{margin:5px; padding:0; border:none;}
+/* Navigation */
+#mainav li a{color:inherit;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#A7C353; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(0,0,0,.6); border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#A7C353;}
+#mainav form select{color:#FFFFFF; background-color:#000000; border-color:rgba(136,136,136,.5);/* #888888 */}
+
+/*旋转图片*/
+.header-grid img {
+    margin: 0 auto;
+    border-radius: 73px;
+    border: 9px solid #eee;
+    padding: 1em 1em;
+}
+.header-grid img:hover {
+    transform: rotateY(360deg);
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+}
+
+/*鼠标移入图片上时的动画特效示结束
+/*图片展显示fltextbox*/
+.music-grids{
+    background-color:#A7C353;
+}
+.music-grids:hover img {
+    opacity: 0.3;
+}
+.fltextbox{
+    position: absolute;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.fltextbox::before,
+.fltextbox::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.fltextbox::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+.fltextbox::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+.fltextbox h4 {
+    font-size: 21px;
+    font-weight:600;
+    color: #fff;
+    font-family: 'Jockey One', sans-serif;
+    padding-top: 16%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+    opacity:0;
+}
+
+.fltextbox p {
+    color: #fff;
+    line-height: 1.7em;
+    font-weight: 300;
+    font-size: 17px;
+    padding: 20px 2.5em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+}
+
+.music-grids:hover .fltextbox::before,
+.music-grids:hover .fltextbox::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.music-grids:hover h4,
+.music-grids:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.col-md-4 {
+    position: relative;
+    min-height: 1px;
+}
+@media (min-width: 200px) {
+    .col-md-4{
+        float: left;
+    }
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after
+{
+    display: table;
+    content: " ";
+}
+/*图片展显示结束*/
